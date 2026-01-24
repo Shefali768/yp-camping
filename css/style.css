@@ -97,3 +97,102 @@ body {
   background-color: #1ebe5d;
 }
 
+/* ===========================
+   PREMIUM LOOK IMPROVEMENTS
+   Add this at the bottom
+=========================== */
+
+/* Better typography + spacing */
+body {
+  line-height: 1.6;
+}
+
+/* Make header sticky + more premium */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Better navigation hover */
+header a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+header a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Hero overlay for luxury feel */
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero h1, .hero p, .hero a {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card hover effect */
+.card {
+  transition: 0.25s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+/* Improve buttons */
+.btn {
+  border-radius: 999px;
+  display: inline-block;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Improve WhatsApp floating button */
+.whatsapp {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+/* Form look (booking page) */
+input, select, textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0c3b2e;
+}
+
+/* Mobile-friendly spacing */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 90px 18px;
+  }
+}
