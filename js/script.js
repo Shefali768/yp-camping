@@ -1,23 +1,23 @@
 // Simple welcome message (can be removed later)
 console.log("Welcome to YP Camping Website");
 function sendToWhatsApp() {
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const bookingType = document.getElementById("bookingType").value;
-  const message = document.getElementById("message").value;
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var bookingType = document.getElementById("bookingType").value;
+  var message = document.getElementById("message").value;
 
-  const businessNumber = "918928112823"; // ← REPLACE with your WhatsApp number
+  var businessNumber = "918928112823"; // ← PUT YOUR NUMBER HERE (NO +)
 
-  const text =
-    `Hello YP Camping,%0A%0A` +
-    `Name: ${name}%0A` +
-    `Phone: ${phone}%0A` +
-    `Booking Type: ${bookingType}%0A` +
-    `Message: ${message}`;
+  var text =
+    "Hello YP Camping,%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Booking Type: " + bookingType + "%0A" +
+    "Message: " + message;
 
-  const whatsappURL = `https://wa.me/${businessNumber}?text=${text}`;
+  var url = "https://wa.me/" + businessNumber + "?text=" + text;
 
-  window.open(whatsappURL, "_blank");
+  window.open(url, "_blank");
 }
 
 
